@@ -1,0 +1,490 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Removes unwanted spacing above navbar */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Modern Floating Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0; /* Ensures it's at the very top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; /* Extends navbar across the page */
+    z-index: 1000; /* Ensures navbar stays above other elements */
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(34, 34, 34, 0.95); /* Dark semi-transparent background */
+    padding: 15px 40px;
+    border-radius: 50px; /* Rounded edges */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Floating effect */
+}
+
+/* Left-side navigation (pages) */
+.nav-left {
+    display: flex;
+    gap: 20px;
+}
+
+/* Right-side (logout button) */
+.nav-right {
+    margin-left: auto; /* Pushes logout to far right */
+}
+
+/* Navbar Links */
+.navbar a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Smooth hover effect */
+    transform: scale(1.08); /* Slight pop-out */
+}
+
+/* About Us Section */
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 5vh 5vw; /* Dynamic padding */
+    background-color: #f9f9f9;
+    height: 100vh; /* Fits within screen */
+    width: 100vw;
+    overflow: auto;
+    margin-top: 80px; /* Prevents overlap with navbar */
+}
+
+/* About Us Image */
+.about-us-image img {
+    max-width: 40vw; /* Keeps image proportional */
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Us Text */
+.about-us-text {
+    max-width: 45vw;
+    text-align: left;
+}
+
+.about-us-text h1 {
+    font-size: 40px;
+    color: #222;
+}
+
+.about-us-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-right {
+        text-align: right;
+    }
+
+    .ads-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.buy-page {
+    text-align: center;
+    padding-top: 100px; /* Spacing below navbar */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #555;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #222;
+}
+
+.product-rating {
+    color: gold;
+}
+
+.product-button {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.product-button:hover {
+    background: #0056b3;
+}
+
+.categories-page {
+    text-align: center;
+    padding-top: 100px; /* Spacing below navbar */
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.category-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.category-button {
+    display: block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.category-button:hover {
+    background: #0056b3;
+}
+
+.account-page {
+    text-align: center;
+    padding-top: 100px; /* Spacing below navbar */
+}
+
+.account-form {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.account-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.account-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.update-button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.update-button:hover {
+    background: #0056b3;
+}
+
+.sell-page {
+    text-align: center;
+    padding-top: 100px; /* Spacing below navbar */
+}
+
+.sell-form {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sell-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.sell-form input, .sell-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.sell-button {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.sell-button:hover {
+    background: #0056b3;
+}
+
+.product-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Main Content */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Product Image */
+.product-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Product Details */
+.product-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Price & Rating */
+.price, .rating {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Seller Info */
+.seller-info {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.seller-info h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.seller-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Chat Button */
+.chat-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #0056b3;
+}
+
+/* Wishlist Product Grid */
+.wishlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Wishlist Card */
+.wishlist-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Wishlist Image Placeholder */
+.wishlist-image-container {
+    width: 100%;
+    height: 180px;
+    background-color: #eee; /* Placeholder background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.wishlist-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures it fits neatly */
+    border-radius: 10px;
+}
+
+.red-bar {
+    position: relative;
+    margin-top: 80px; /* Adjust this value to push it down */
+    z-index: 5;
+}
+
+.account-container {
+    margin-top: 120px; /* Adjust to fit under the navbar */
+    padding: 20px;
+}
